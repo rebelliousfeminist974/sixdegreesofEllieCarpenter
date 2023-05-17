@@ -7,8 +7,43 @@ import java.util.ArrayList;
 class TestDataset {
   private ArrayList<Person> testDataset;
   
-  @Test
   void createDataset() {
     testDataset = new ArrayList<Person>();
+  }
+  
+  void addToDataset() {
+    testDataset = new ArrayList<Person>();
+    Person person1 = new Person("Ellie", "Carpenter", 0, 0);
+    testDataset.add(person1);
+    assertEquals(testDataset.size(), 1);
+  }
+  
+  void getFirstName() {
+    testDataset = new ArrayList<Person>();
+    Person person1 = new Person("Ellie", "Carpenter", 0, 0);
+    testDataset.add(person1);
+    assertEquals(testDataset.get(0).getFirstName(), "Ellie");
+  }
+  
+  void getLastName() {
+    testDataset = new ArrayList<Person>();
+    Person person1 = new Person("Ellie", "Carpenter", 0, 0);
+    testDataset.add(person1);
+    assertEquals(testDataset.get(0).getLastName(), "Carpenter");
+  }
+  
+  void getEllieCarpenterMajorNum() {
+    testDataset = new ArrayList<Person>();
+    Person person1 = new Person("Ellie", "Carpenter", 0, 0);
+    testDataset.add(person1);
+    assertEquals(testDataset.get(0).getEllieCarpenterMajorNum(), 0);
+  }
+  
+  @Test
+  void getEllieCarpenterMinorNum() {
+    testDataset = new ArrayList<Person>();
+    Person person1 = new Person("Ellie", "Carpenter", 0, 0);
+    testDataset.add(person1);
+    assertEquals(testDataset.get(0).getEllieCarpenterMinorNum(), 0);
   }
 }
