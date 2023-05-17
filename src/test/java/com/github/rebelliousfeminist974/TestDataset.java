@@ -39,11 +39,18 @@ class TestDataset {
     assertEquals(testDataset.get(0).getEllieCarpenterMajorNum(), 0);
   }
   
-  @Test
   void getEllieCarpenterMinorNum() {
     testDataset = new ArrayList<Person>();
     Person person1 = new Person("Ellie", "Carpenter", 0, 0);
     testDataset.add(person1);
     assertEquals(testDataset.get(0).getEllieCarpenterMinorNum(), 0);
+  }
+  
+  @Test
+  void outputPersonAsString() {
+    testDataset = new ArrayList<Person>();
+    Person person1 = new Person("Ellie", "Carpenter", 0, 0);
+    testDataset.add(person1);
+    assertEquals(testDataset.get(0).toString(), "Ellie Carpenter has an Ellie Carpenter number of 0.0");
   }
 }
